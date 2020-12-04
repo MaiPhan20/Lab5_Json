@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Square Root Users</title>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width=device-width,initial-scale=1.0">
+    <script>
+        function readFormData()
+        {
+            var fname = document.getElementById('fname').value;
+            var lname = document.getElementById('lname').value;
+            var uname = document.getElementById('uname').value;
+            var password = document.getElementById('password').value;
+            var email = document.getElementById('email').value;
+            var description = document.getElementById('description').value;
+            //
+            var data = {
+                "firstName" : fname,
+                "lastname"  :lname,
+                "userName"  :uname,
+                "password"  :password,
+                "eMail"     :email,
+                "description" : description
+            };
+            alert('Data in JSON format::\n\n\n'+JSON.stringify(data));
+            alert('Data in JSON format :: \n\n\n'+JSON.stringify(data,null,4));
+        }
+
+    </script>
+</head>
+<body>
+<div align="center" id="Title">Square Root User profile</div>
+<br>
+<br>
+<br>
+<div id="enterdata" align="center">
+    <table>
+        <tr>
+            <td style="width: 300px;height: 50px;">First Name</td>
+            <td style="width: 300px;height: 50px;"><input
+                    style="width: 300px;"type="text" id="fname"></td>
+        </tr>
+        <tr>
+            <td style="width: 300px;height: 50px;">Last Name</td>
+            <td style="width: 300px;height: 50px;"><input
+                    style="width: 300px;"type="text" id="lname"></td>
+        </tr>
+        <tr>
+            <td style="width: 300px;height: 50px;">User Name</td>
+            <td style="width: 300px;height: 50px;"><input
+                    style="width: 300px;"type="text" id="uname"></td>
+        </tr>
+        <tr>
+            <td style="width: 300px;height: 50px;">Password</td>
+            <td style="width: 300px;height: 50px;"><input
+                    style="width: 300px;"type="password" id="password"></td>
+        </tr>
+        <tr>
+            <td style="width: 300px;height: 50px;">Email</td>
+            <td style="width: 300px;height: 50px;"><input
+                    style="width: 300px;"type="text" id="email"></td>
+        </tr>
+        <tr>
+            <td style="width: 300px;height: 50px;">Tell About Yourself</td>
+            <td style="width: 300px;height: 50px;"><textarea
+                    rows="4" cols="50" id="description"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" style="height: 50px;"><input
+            style="width: 200px" type="submit"
+            value="Submit User Registration" onclick="readFormData()"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

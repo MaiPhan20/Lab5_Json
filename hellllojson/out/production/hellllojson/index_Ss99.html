@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MasterPublications</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script type="text/javascript">
+        var jsonString = "{\"UserID\":465914,\"user\":{ \"firstname\": \"James\", \"lastname\": \"Gunn\"},"
+            + "\"DOB\": \"30-5-1990\","
+            + "\"Storytype\": \"Horror\","
+            + "\"comments\": {\"body\": \"Horror and Suspense Thriller\"} }";
+        //
+        var jsonObject = JSON.parse(jsonString);
+        //
+        var userObject = jsonObject["user"];
+        var commentObject = jsonObject["comments"];
+        //
+        document.write("<hr>");
+        document.write("<table>");
+
+        document.write("<tr><td>" + "UserID" + "</td>");
+        document.write("<td>" + jsonObject["UserID"] + "</td></tr>");
+
+        document.write("<tr><td>" + "First name" + "</td>");
+        document.write("<td>" + userObject["firstname"] + "</td></tr>");
+
+        document.write("<tr><td>" + "Last Name" + "</td>");
+        document.write("<td>" + userObject["lastname"] + "</td></tr>");
+
+        document.write("<tr><td>" + "DOB" + "</td>");
+        document.write("<td>" + jsonObject["DOB"] + "</td></tr>");
+
+        document.write("<tr><td>" + "Story Type" + "</td>");
+        document.write("<td>" + jsonObject["Storytype"] + "</td></tr>");
+
+        document.write("<tr><td>" + "Comments" + "</td>");
+        document.write("<td><textarea>" + commentObject["body"] + "</textarea></td></tr>");
+
+        document.write("</table>");
+        document.write("</hr>");
+        //
+        JSON.parse(jsonString, function (k, v) {
+            console.log("KEY :: " + k + "::VALUE:: " + v);
+            alert(k);
+            return v;
+        })
+
+    </script>
+</head>
+<body>
+<div></div>
+</body>
+</html>

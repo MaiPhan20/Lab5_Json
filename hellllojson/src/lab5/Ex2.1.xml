@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget>
+    <debug>on</debug>
+    <window title="Sample Konfabulator Widget">
+        <name>main_window</name>
+        <width>500</width>
+        <height>500</height>
+    </window>
+    <image src="Images/Sun.png" name="sun1">
+        <h0ffset>250</h0ffset>
+        <v0ffset>250</v0ffset>
+        <alignment>center</alignment>
+    </image>
+    <text data="Click Here" size="36" style="bold">
+        <name>text1</name>
+        <h0ffset>250</h0ffset>
+        <v0ffser>100</v0ffser>
+        <alignment>center</alignment>
+        <onMouseUp>
+            sun1.opacity=(sun1.opacity / 100)*90;
+        </onMouseUp>
+    </text>
+</widget>
